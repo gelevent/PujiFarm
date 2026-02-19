@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - PujiFarm</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐔</text></svg>">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
@@ -197,7 +200,8 @@
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
                         @forelse($items as $item)
-                            <tr class="hover:bg-emerald-50/50 transition border-b border-gray-100 last:border-0 hover:bg-emerald-50/50 hover:shadow-sm transition-all duration-200 ">
+                            <tr
+                                class="hover:bg-emerald-50/50 transition border-b border-gray-100 last:border-0 hover:bg-emerald-50/50 hover:shadow-sm transition-all duration-200 ">
 
                                 <!-- 1. Kolom Gambar (Center Vertically) -->
                                 <td class="px-4 sm:px-6 py-4 whitespace-nowrap align-middle">
@@ -258,11 +262,11 @@
 
                                                 <!-- Toggle Switch (Ukuran Pas) -->
                                                 <div class="relative w-11 h-6 bg-gray-200 rounded-full peer 
-                                    peer-checked:bg-emerald-600 
-                                    after:content-[''] after:absolute after:top-[2px] after:left-[2px] 
-                                    after:bg-white after:border-gray-300 after:border after:rounded-full 
-                                    after:h-5 after:w-5 after:transition-all 
-                                    peer-checked:after:translate-x-5 hover:after:scale-105">
+                                        peer-checked:bg-emerald-600 
+                                        after:content-[''] after:absolute after:top-[2px] after:left-[2px] 
+                                        after:bg-white after:border-gray-300 after:border after:rounded-full 
+                                        after:h-5 after:w-5 after:transition-all 
+                                        peer-checked:after:translate-x-5 hover:after:scale-105">
                                                 </div>
                                             </label>
                                         </form>

@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PujiFarm - Produk Segar Langsung dari Peternakan</title>
+    <title>PujiFarm - Ternak & Unggas</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐔</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
@@ -194,6 +196,20 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
+
+        @keyframes retro-progress {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        .animate-retro-progress {
+            animation: retro-progress 1.5s ease-in-out infinite;
+        }
     </style>
 </head>
 
@@ -285,7 +301,8 @@
     </nav>
 
 
-    <header class="relative py-16 sm:py-24 bg-gradient-to-br from-white via-emerald-50/50 to-blue-50/50 overflow-hidden">
+    <header
+        class="relative py-16 sm:py-24 bg-gradient-to-br from-white via-emerald-50/50 to-blue-50/50 overflow-hidden">
 
         <!-- Subtle Background Blobs -->
         <div class="absolute inset-0 overflow-hidden pointer-events-none">
@@ -304,8 +321,7 @@
                     <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-6">
                         Dari Keluarga untuk Anda —
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-600">
-                            PujiFarm
-                        </span>.
+                            PujiFarm</span>.
                     </h1>
 
                     <!-- Subheading -->
@@ -490,8 +506,9 @@
             <!-- Products Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 @foreach($highlights as $item)
-                    <div class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 
-                                                        overflow-hidden border border-gray-200 card-hover fade-in-up">
+                    <div
+                        class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 
+                                                                                overflow-hidden border border-gray-200 card-hover fade-in-up">
 
                         <!-- Image Container -->
                         <div class="overflow-hidden h-48 sm:h-64 bg-gray-100 relative">
@@ -506,8 +523,9 @@
                             @endif
 
                             <!-- Badge -->
-                            <span class="absolute top-3 sm:top-4 left-3 sm:left-4 bg-emerald-600 text-white 
-                                                               text-xs px-3 py-1.5 rounded-full font-semibold shadow-sm">
+                            <span
+                                class="absolute top-3 sm:top-4 left-3 sm:left-4 bg-emerald-600 text-white 
+                                                                                       text-xs px-3 py-1.5 rounded-full font-semibold shadow-sm">
                                 Best Seller
                             </span>
                         </div>
@@ -536,7 +554,7 @@
                             <a href="https://wa.me/{{ $waNumber }}?text=Halo, saya tertarik dengan {{ $item->name }}"
                                 target="_blank"
                                 class="block w-full bg-emerald-600 text-white text-center px-5 py-3 rounded-xl 
-                                                              font-semibold hover:bg-emerald-700 transition-all btn-premium text-sm sm:text-base">
+                                                                                      font-semibold hover:bg-emerald-700 transition-all btn-premium text-sm sm:text-base">
                                 Pesan Sekarang
                             </a>
                         </div>
@@ -679,8 +697,20 @@
                     mobileMenuBtn.setAttribute('aria-expanded', 'false');
                 });
             });
+            setTimeout(() => {
+                document.getElementById('loadingScreen').style.display = 'none';
+            }, 1500);
         }
     </script>
+
+    <div id="loadingScreen" class="fixed inset-0 bg-white z-[9999] flex items-center justify-center">
+        <div class="text-center">
+            <p class="text-gray-900 font-mono text-sm mb-3 tracking-widest font-bold">LOADING</p>
+            <div class="w-48 h-1 bg-gray-200 rounded-full overflow-hidden">
+                <div class="h-full bg-gray-900 animate-retro-progress"></div>
+            </div>
+        </div>
+    </div>
 
 </body>
 
