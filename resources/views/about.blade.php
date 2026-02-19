@@ -192,7 +192,7 @@
                         <div class="bg-gradient-to-br from-emerald-100 to-blue-100 rounded-3xl p-8 sm:p-10 h-72 sm:h-80 flex items-center justify-center card-hover border border-gray-100">
                             <div class="text-center">
                                 <div class="text-7xl sm:text-8xl mb-4 animate-float">🏡</div>
-                                <p class="text-gray-700 font-semibold text-sm sm:text-base">Usaha Keluarga Sejak 2000</p>
+                                <p class="text-gray-700 font-semibold text-sm sm:text-base">Usaha Keluarga Sejak 1999</p>
                             </div>
                         </div>
                         
@@ -234,7 +234,7 @@
                     
                     <!-- Stats Mini -->
                     <div class="grid grid-cols-3 gap-4 mt-8 pt-6 border-t border-gray-100">
-                        <div class="text-center">
+                        <div class="text-center">   
                             <div class="text-2xl font-bold text-emerald-600">20+</div>
                             <div class="text-xs text-gray-500">Tahun Pengalaman</div>
                         </div>
@@ -404,7 +404,7 @@
                             <h4 class="font-semibold text-gray-900 mb-2">Alamat Lengkap</h4>
                             <p class="text-sm text-gray-600 leading-relaxed">
                                 Jl. Armed RT 02 / RW 03<br>
-                                Desa Kreweng, Kecamatan Petanahan<br>
+                                Desa Munggu, Kecamatan Petanahan<br>
                                 Kabupaten Kebumen, Jawa Tengah 54382
                             </p>
                         </div>
